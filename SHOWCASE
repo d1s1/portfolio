@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Affiliate Marketing Site</title>
+    <style>
+        /* Custom CSS for WordPress */
+        :root {
+            --primary: #6B46C1;
+            --secondary: #4299E1;
+            --accent: #F6AD55;
+            --background: #F7FAFC;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+            border-radius: 0 0 30px 30px;
+        }
+
+        .hero-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        /* Feature Cards */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Testimonials */
+        .testimonial-slider {
+            background: var(--background);
+            padding: 50px 20px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-title {
+                font-size: 2em;
+            }
+        }
+    </style>
+    <!-- Load Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1 class="hero-title">Discover the Best Tools for Success! 🚀</h1>
+        <p class="hero-subtitle">Handpicked recommendations to transform your life</p>
+        <a href="#features" class="cta-button">Explore Now ➔</a>
+    </section>
+
+    <!-- Feature Grid -->
+    <section id="features" class="feature-grid">
+        <div class="feature-card">
+            <div class="feature-icon">💡</div>
+            <h3>Expert Picks</h3>
+            <p>Curated tools tested by professionals</p>
+            <a href="YOUR_AFFILIATE_LINK" class="cta-button">Learn More</a>
+        </div>
+        
+        <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h3>Save Money</h3>
+            <p>Exclusive discounts & deals</p>
+            <a href="YOUR_AFFILIATE_LINK" class="cta-button">Get Deals</a>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-icon">🎯</div>
+            <h3>Easy Guides</h3>
+            <p>Step-by-step tutorials</p>
+            <a href="YOUR_AFFILIATE_LINK" class="cta-button">Start Learning</a>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonial-slider">
+        <div class="testimonial-card">
+            <p>"This site helped me find the perfect software!"</p>
+            <h4>- Jane D.</h4>
+        </div>
+        <div class="testimonial-card">
+            <p>"Saved me hours of research. Highly recommended!"</p>
+            <h4>- Mark T.</h4>
+        </div>
+    </section>
+</body>
+</html>

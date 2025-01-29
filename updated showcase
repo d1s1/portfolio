@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Marketing Site</title>
+    <style>
+        :root {
+            --primary: #6B46C1;
+            --secondary: #4299E1;
+            --accent: #F6AD55;
+            --background: #F7FAFC;
+            --text: #2D3748;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 120px 20px;
+            text-align: center;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s ease;
+        }
+
+        .hero-title {
+            font-size: 3.5em;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.4em;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* Hidden Sections */
+        .hidden-section {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        .revealed {
+            opacity: 1;
+            transform: translateY(0);
+            max-height: 2000px;
+            padding: 80px 0;
+        }
+
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            transform: scale(0.95);
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .revealed .feature-card {
+            transform: scale(1);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(45deg, var(--accent), #FF6B6B);
+            color: white;
+            padding: 16px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(246,173,85,0.4);
+        }
+
+        /* Testimonials */
+        .testimonial-slider {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 80px 20px;
+            margin-top: 50px;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.95);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        @media (max-width: 768px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-title {
+                font-size: 2.2em;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <h1 class="hero-title">Discover the Best Tools for Success! 🚀</h1>
+        <p class="hero-subtitle">Handpicked recommendations to transform your life</p>
+        <button class="cta-button" onclick="revealContent()">Explore Now</button>
+    </section>
+
+    <!-- Hidden Content Sections -->
+    <div class="hidden-section" id="contentSection">
+        <!-- Feature Grid -->
+        <section class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">💡</div>
+                <h3>Expert Picks</h3>
+                <p>Curated tools tested by professionals</p>
+                <a href="https://github.com/d1s1/portfolio/blob/main/SHOWCASE#expert-picks" 
+                   class="cta-button"
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                   Learn More
+                </a>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Save Money</h3>
+                <p>Exclusive discounts & deals</p>
+                <a href="https://github.com/d1s1/portfolio/blob/main/SHOWCASE#save-money" 
+                   class="cta-button"
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                   Get Deals
+                </a>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Easy Guides</h3>
+                <p>Step-by-step tutorials</p>
+                <a href="https://github.com/d1s1/portfolio/blob/main/SHOWCASE#easy-guides" 
+                   class="cta-button"
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                   Start Learning
+                </a>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonial-slider">
+            <div class="testimonial-card">
+                <p>"This site helped me find the perfect software!"</p>
+                <h4>- Jane D.</h4>
+            </div>
+            <div class="testimonial-card">
+                <p>"Saved me hours of research. Highly recommended!"</p>
+                <h4>- Mark T.</h4>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function revealContent() {
+            // Reveal hidden sections
+            const contentSection = document.getElementById('contentSection');
+            contentSection.classList.add('revealed');
+
+            // Animate hero section
+            const heroSection = document.getElementById('hero');
+            heroSection.style.padding = '60px 20px';
+            heroSection.style.minHeight = 'auto';
+
+            // Add smooth scroll to content
+            setTimeout(() => {
+                contentSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }, 300);
+        }
+    </script>
+</body>
+</html>
